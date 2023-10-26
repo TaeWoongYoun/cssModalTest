@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+main{
+    width: 1440px;
+    height: 775px;
+    background-color: aliceblue;
+}
+
+input[id="modal"] {
+    display: none;
+}
+
+header{
+    height: 100px;
+}
+
+.logo{
+    display: flex;
+    background-color: black;
+    color: aliceblue;
+    font-size: 48px;
+    width: 250px;
+    height: 100%;
+    float: left;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.div{
+    width: 250px;
+    height: 100%;
+    background-color: aliceblue;
+    border-bottom: #000 3px solid;
+    float: left;
+    border-right: #000 3px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+
+
+.openBtn{
+    background-color: greenyellow;
+    border: 3px #000 solid;
+    border-radius: 90px;
+    padding: 20px;
+    display: block; /*width height 값 주려고 먹임*/
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-weight: 900;
+    float: right;
+    margin-top: -90px;
+    margin-right: 50px;
+}
+
+.modalBox{
+    width: 480px;
+    height: 270px;
+    background-color: lightskyblue;
+    border: 3px #000 solid;
+    border-radius: 10px;
+    margin-left: 300px;
+    position: relative;
+    visibility: hidden;
+    margin-top: 200px;
+    margin-left: 450px;
+}
+
+.closeBtn{
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    color: aliceblue;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-left: 3px #000 solid;
+    border-bottom: 3px #000 solid;
+}
+
+h2{
+    text-align: center;
+    margin-right: 140px;
+}
+
+li{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* 모달 윈도우가 팝업되는 코어 소스 */
+input#modal[type=checkbox]:checked~.modalBox {
+    visibility: visible;
+}
+/* 따라서 이 코드는 "modal"이라는 ID를 가진 체크박스
+(input 요소)가 선택되었을 때, 
+그 체크박스의 형제 중에서 클래스 이름이
+ "modalBox"인 요소의 가시성(visibility)을 활성화하여 
+ 모달을 보이게 만듬
+ */
+
